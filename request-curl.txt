@@ -1,0 +1,3 @@
+curl --request HEAD \
+  --url http://www.google.com/ \
+  --cookie NID=511%3DG7vDGuAVJLC8aNe1jmeeb9z7CRZiTOs5rUMoIjV8xWUDUTtmXXVNCW22yWfV-4jn31aFS9e3ThUfUtEurGMl4mba4bWtS_jstssj6gaFpFNg9lw8E4qjpTDbYXt6ce_CUo8FGLWVNO_4rtGUcQwxvX-e_1uNH2Jx8Pu2F5UI4gU
