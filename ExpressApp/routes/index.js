@@ -14,7 +14,7 @@ router.get('/', function(_req, res, _next) {
 });
 
 let last_visit = 0;
-router.get('/last.txt', function(_req, res, _next) { 
+router.get('/last.txt', function(_req, res, _next) {
   res.send(
       String(last_visit),
   );
@@ -32,27 +32,14 @@ router.get('/color.html', (req, res, next) =>{
 
 
 //task 3.3.
-const timeStamps = [];
-router.get('/log.html', (req, res, next)=>{
+let timeStamps = null;
+router.get('/log.html', (_req, res, _next)=>{
   const now = new Date();
-  timeStamps.push(JSON.stringify(now));
-  res.send(`<html>
-  <head> <script>
-  function renderList(){
-    let list = document.getElementById("1");
-    for(let i = 0; i < [${timeStamps}].length; i++){
-      let listObj = document.createElement("LI");
-      console.log(${timeStamps}[i]);
-      listObj.innerHTML = ${timeStamps}[i].value;
-      list.appendChild(listObj);
-    }
+  if (timeStamps === null) {
+    timeStamps = `<li>${now}</li>`;
+  } else {
+    timeStamps +=`<li>${now}</li>`;
   }
-  
-</script>
-</head>
-  <body onload = "renderList()">
-      <ul id = "1"></ul>   
-  </body>
-</html>`);
+  res.send(`<ul>${timeStamps}</ul>`);
 });
 module.exports = router;
