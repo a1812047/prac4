@@ -1,3 +1,3 @@
-curl --request GET \
+curl --request HEAD \
   --url https://google.com/ \
-  --cookie '1P_JAR=2022-03-30-11; AEC=AVQQ_LDXUN95-jpW1wyvOTz5KoquqB1kSxQeNVcUXdKElprVYz6W_xNhJiw; NID=511%3DuDW-P1KAjw2ow8oXllNvjDWmtd43OHzsCg1YQn_bZw4KaU5uz49DcCStAqKtzYeLwbP6qRGodbOv6gMnPHjEqTvvK7Xq9qdzs090JkM0NP9t99DE1ZTeHHzM7ZuHdkjclhB_HvsLEoE89U2Jh9aYLbmpcTPTxdua4uOAl4-ciGw'
+  --cookie '1P_JAR=2022-03-30-23; NID=511%3DJKaA7Nnip-5dJ9c08mnOVR38BBM--NemoccFHuTqQNtIDqtkw8hx5MmSXyrBvDJ7qQOaz3GMDGiynpIY3vRPhrDuhfZbWsQ1Q-9-uQy5cTmZBSLet8iSS8UWkrzStfXvg0C57ku-FTtlUBl2_LMx6_iHDTesiC-V6BH0qRcUY-g'
