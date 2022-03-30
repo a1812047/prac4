@@ -19,4 +19,5 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/last.txt',indexRouter);
 app.use('/color.html', indexRouter);
+app.use('/log.html', indexRouter);
 module.exports = app;
