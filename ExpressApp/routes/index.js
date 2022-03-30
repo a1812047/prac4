@@ -42,4 +42,25 @@ router.get('/log.html', (_req, res, _next)=>{
   }
   res.send(`<ul>${timeStamps}</ul>`);
 });
+
+
+//task 3.4
+let boolean = false;
+router.get('/first.html', (req, res, next)=>{
+  if(!boolean){
+    res.send(`<h1>Welcome</h1><a href = "/main.html">/main.html</a>`);
+    boolean = true;
+  }else{
+    res.redirect('/main.html');
+  }
+});
+
+router.get('/main.html', (req, res, next)=>{
+  if(!boolean){
+    res.redirect('/first.html');
+  }else{
+    res.send(`<h1>My main site</h1>
+    <p>Some random text of your choice can be advertised over here.</p>`)
+  }
+})
 module.exports = router;

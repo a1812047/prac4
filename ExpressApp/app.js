@@ -20,4 +20,6 @@ app.use('/users', usersRouter);
 app.use('/last.txt', indexRouter);
 app.use('/color.html', indexRouter);
 app.use('/log.html', indexRouter);
+app.use('/main.html', indexRouter);
+app.use('/first.html', indexRouter);
 module.exports = app;
