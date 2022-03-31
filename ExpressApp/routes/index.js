@@ -26,7 +26,17 @@ router.get('/last.txt', function(_req, res, _next) {
 const colors = ['red', 'yellow', 'green', 'blue'];
 let i = 0;
 router.get('/color.html', (req, res, next) =>{
-  res.send(`<h1 style = "color: ${colors[i%4]}">${colors[i%4]}</h1>`);
+  res.send(`<!DOCTYPE html>
+  <html lang = "en">
+      <head>
+          <title>
+              new title
+          </title>
+      </head>
+      <body>
+          <h1 style = "color: ${colors[i%4]}">${colors[i%4]}</h1>
+      </body>
+  </html>`);
   i++;
 });
 
@@ -40,7 +50,17 @@ router.get('/log.html', (_req, res, _next)=>{
   } else {
     timeStamps +=`<li>${now}</li>`;
   }
-  res.send(`<ul>${timeStamps}</ul>`);
+  res.send(`<!DOCTYPE html>
+  <html lang = "en">
+      <head>
+          <title>
+              new title
+          </title>
+      </head>
+      <body>
+          <ul>${timeStamps}</ul>
+      </body>
+  </html>`);
 });
 
 
@@ -48,7 +68,17 @@ router.get('/log.html', (_req, res, _next)=>{
 let boolean = false;
 router.get('/first.html', (req, res, next)=>{
   if (!boolean) {
-    res.send(`<h1>Welcome</h1><a href = "/main.html">/main.html</a>`);
+    res.send(`<!DOCTYPE html>
+    <html lang = "en">
+        <head>
+            <title>
+                new title
+            </title>
+        </head>
+        <body>
+            <h1>Welcome</h1><a href = "/main.html">/main.html</a>
+        </body>
+    </html>`);
     boolean = true;
   } else {
     res.redirect('/main.html');
@@ -59,8 +89,18 @@ router.get('/main.html', (req, res, next)=>{
   if (!boolean) {
     res.redirect('/first.html');
   } else {
-    res.send(`<h1>My main site</h1>
-    <p>Some random text of your choice can be advertised over here.</p>`);
+    res.send(`<!DOCTYPE html>
+    <html lang = "en">
+        <head>
+            <title>
+                new title
+            </title>
+        </head>
+        <body>
+            <h1>My main site</h1>
+        <p>Some random text of your choice can be advertised over here.</p>
+        </body>
+    </html>`);
   }
 });
 module.exports = router;
