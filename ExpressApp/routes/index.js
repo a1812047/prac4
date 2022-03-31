@@ -1,11 +1,7 @@
-/* eslint-disable no-unused-vars */
 /* eslint-disable new-cap */
-/* eslint-disable no-var */
-/* eslint-disable camelcase */
-/* eslint-disable spaced-comment */
-var express = require('express');
-const app = require('../app');
-var router = express.Router();
+
+const express = require('express');
+const router = express.Router();
 
 
 /* GET home page. */
@@ -13,12 +9,12 @@ router.get('/', function(_req, res, _next) {
   res.render('index', {title: 'Express'});
 });
 
-let last_visit = 0;
+let lastvisit;
 router.get('/last.txt', function(_req, res, _next) {
   res.send(
-      String(last_visit),
+      String(lastvisit),
   );
-  last_visit = new Date();
+  lastvisit = new Date();
 });
 
 
@@ -63,7 +59,6 @@ router.get('/log.html', (_req, res, _next)=>{
 });
 
 
-//task 3.4
 let boolean = false;
 router.get('/first.html', (req, res, next)=>{
   if (!boolean) {
