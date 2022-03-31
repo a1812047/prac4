@@ -41,7 +41,6 @@ router.get('/color.html', (req, res, next) =>{
 });
 
 
-//task 3.3.
 let timeStamps = null;
 router.get('/log.html', (_req, res, _next)=>{
   const now = new Date();
